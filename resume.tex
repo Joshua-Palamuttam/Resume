@@ -1,0 +1,165 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.5in,top=0.3in,right=0.5in,bottom=0.3in]{geometry} % Document margins
+\usepackage{bibentry}
+
+\name{Joshua Palamuttam} % Your name
+\address{San Jose, CA 95138} % Your address
+%\address{San Jose, CA 95138} % Your address
+% \address{5324 Vicenza Way \\ San Jose, CA 95138} % Your address
+%\address{5500 Wabash Ave \\ Terre Haute, IN 47803} % Your secondary address (optional)
+\address{(408)~$\cdot$~841~$\cdot$~6194 \\ joshpal97@gmail.com}%Your phone number and email
+\address{https://github.com/joshpal97 \\ https://JoshuaPalamuttam.com}
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Summary}
+{A highly-motivated computer professional, who graduated with a Computer Science degree from Rose-Hulman Institute of Technology '19, with the enthusiasm to accept new challenges. Currently working as a Software Engineer at Kaiser Permanente as a Junior Dot Net Analyst (San Jose, CA) , previously worked for DMI as a Full-Stack Software engineer (Indianapolis, IN). Both positions have given me hands-on work experience as a software engineer working on application design, development, and quality assurance.}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+% {\bf Rose-Hulman Institute of Technology} \hfill {\bf 2015 - 2019}
+\begin{rsemisection}{Rose-Hulman Institute of Technology}{2015 - 2019}{Bachelor of Science in Computer Science}
+\end{rsemisection}
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+\begin{rSubsection}{Kaiser Permanente Genetics: RLTG}{February 2020 - Present}{Junior Dot Net Analyst, San Jose, CA}
+
+\item Main purpose of this job was to do Research and Development for different applications used by the Genetics Department.
+\item Responsibilities for this job include gathering requirements from Genetic Counselors, Lab Technicians and Doctors part of the Genetics Department, developing applications from gathered requirements, and IT support for these applications.
+\item Made applications with the Kaiser tech stack of primarily .Net Core MVC applications, with a SQL Database. Occasionally made Batch Files to aid Lab Technicians in gathering data from Lab Machines.
+\end{rSubsection}
+\begin{rSubsection}{DMI}{May 2019 - February 2020}{Software Engineer, Indianapolis, IN}
+
+\item Helped create a proof of concept application for Kar Global to optimize lot operations at a car auction site, using Angular, Node.js, AWS serverless framework, and SQL.
+\item Helped build a physics engine called ISCAAN for Allison Transmission to simulate a transmission.
+\item The majority of Allison Transmission's proprietary math was done using C++, which was then passed to a regular Angular, .Net Core, SQL stack, with Entity Framework Core as the ORM. 
+\item Because of ISCAAN's large nature, the project was designed to use a hexagonal software architecture. 
+\item Built a Microsoft Teams Chat bot for DMI, using LUIS an Azure Cognitive Service (NLP) with a .Net Core back end
+\item All projects used Azure Devops to adhere to SAFe agile practices, such as CI/CD, unit testing, and integration testing
+\end{rSubsection}
+
+% \begin{rSubsection}{Counterpart}{Summer 2018}{Software Engineering Intern, Indianapolis, IN}
+
+% \item Designed a Lua script to perform all tasks on a client's website with 50,000 concurrent fake users
+% \item Monitored the network and server while load testing, and logged areas of inefficiency in the website
+% \item Gathered requirements and greatly improved the front-end of a website changing the back-end accordingly
+% %\item Gained experience in production level  C\#, SQL, Javascript, CSS, and HTML
+% %Created a Lua Script to simulate the load of 50,000 concurrent users performing various tasks  on a website 
+% %\item Updated the front-end and back-end of the not for profit fundraising website appToGive on a Microsoft stack
+% \end{rSubsection}
+% \begin{rSubsection}{Tenable Network Security}{Summer 2017}{PVS/NNM QA intern, Columbia, MA}{}
+% \item Perform and log in JIRA various Quality Assurance tasks on Tenable's product NNM
+% \item Conducted a comparative analysis of various memory usage and virtual hosting models of NNM
+% \item Led a story (in regards to Agile/Scrum) through the full sprint cycle 
+% \end{rSubsection}
+% \begin{rSubsection}{Cisco Systems}{Summer 2016}{Cloud Consumption Consultant/Intern San Jose, CA}{}
+% \item Developed an interval tree to hold consumer information to then go through thousands of users to see
+%  which consumers were using Cisco's cloud platform
+% \item Using the excel files outputted by the interval tree created two scripts one to parse the excel files to populate an Oracle database the other to cross check the consumers against the Oracle database
+%\item Worked with the development team to perform data analytics on critical components of the product.
+% \end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+\begin{rsemisection}{Compile.io (Angular, Spring Boot, MongoDb, Docker)}{2018-2019}
+\item My Senior Project was to create a website that would automatically grade students work
+\item This was done by putting the students code into a docker container, and returning the results in a clear manner.
+\end{rsemisection}
+
+\begin{rsemisection}{Full stack website, College Cookbook (HTML, CSS, Javascript, MongoDB)}{Fall 2017}
+\item The website can be found at this link: https://college-cookbook-jkl.firebaseapp.com/login.html
+\item Developed and Integrated a MongoDB database for the back end and deployed front end through Firebase
+% \item The front end is deployed through Firebase, the back end through Heroku, and uses Mlab with MongoDB
+\item Features: posting to twitter, emailing recipes, inputting recipes into the database, and secure login. 
+\end{rsemisection}
+
+% \begin{rsemisection}{Reverse-Engineered Design (Java)}{Winter 2017}
+% \item This application reverse engineers the design of a supplied code base by returning a UML diagram of the code, also has the ability to detect different software design patterns in the code base. - in my GitHub repository
+%\item The project uses Java, Graphiz, PlantUML, and SOOT, a byte code instrumentation framework. 
+%\item The project and more details can be found in this github repository: https://github.com/joshpal97/RevEngD
+% \end{rsemisection}
+
+% \begin{rsemisection}{Scheme Interpreter (Scheme)}{Fall 2017}
+% %\item Created a fully functional Scheme interpreter in scheme
+% \item Interprets free form scheme syntax and converts it into scheme code - in my GitHub repository
+% \item In the process of doing this I gained insight into functional programming, and the basics of an interpreter
+% %\item The project can be found in this github repository: https://github.com/joshpal97/Scheme-Interpreter
+% \end{rsemisection}
+
+\begin{rsemisection}{Predict NBA Rookie to Hall of Famer (R, Machine Learning) }{Spring 2017}
+\item Predict whether a NBA Rookie would be a regular, all-star or hall of fame player using statistics  - in GitHub
+\item Best algorithms were: Regression trees, Clustering with K means, Decision trees, and Neural Nets
+%\item GitHub link: https://github.com/joshpal97/PredictNBARookiesToHallOfFame
+%\item Regression trees made the most intuitive sense since it gave a nice rundown of the stats to look at 
+\end{rsemisection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{7ex}} l }
+Programming Languages & C\#, Java, SQL, HTML, CSS, JavaScript, Typescript, Python\\[0.001ex]
+                      %& R \\[0.001ex]
+Frameworks & Angular, .Net Core, Spring, Node.js, Entity Framework Core \\[0.001ex]
+%Operating Systems & Ubuntu, Windows, OSX\\
+Tools & Git, Azure Devops,Visual Studio, Visual Studio Code \\[0.001ex]
+Certifications & SAFe 4.6
+%Confluence,\\[0.001ex]
+ %     & Load Impact \\[0.001ex]
+ % MongoDB, Heroku, Firebase
+\end{tabular}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	ACTIVITIES SECTION
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{Activities}
+% \begin{rsemisection}{Service Chair for Residence Hall Association, Rose-Hulman}{2017}
+% \item Organized various community service events every week around the Terre Haute area 
+% %providing the students at Rose-Hulman a platform to get involved in community service events while getting a great education at RHIT. 
+% \end{rsemisection}
+% \begin{rsemisection}{Sophomore Advisor for Resident Life Staff, Rose-Hulman }{2016}
+% \item Help freshman make a smooth transition from high school to college, by living with them and planning activities
+% %\item I would answer homework questions, plan and promote floor activities, encourage student participation in campus organizations, and help create floor communities. 
+%  \item Gained leadership experience along with how to be a responsible and caring leader 
+% \end{rsemisection}
+% \end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE SECTION
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{References}
+% \begin{rsemisection}{Giang Hoang}{Manager at Tenable} 
+% \item gianghoang00@gmail.com
+% \end{rsemisection}
+% \begin{rsemisection}{Jason Bourg}{Manager at Counterpart} 
+% \item jason.bourg@counterpart.biz
+% \end{rsemisection}
+% \end{rSection}
+
+
+
+\end{document}
