@@ -8,14 +8,19 @@ This is a LaTeX-based resume repository that generates a professional PDF resume
 
 ## Build Commands
 
-### Compile the resume to PDF
+### Compile the resume to PDF with Tectonic (recommended)
 ```bash
-pdflatex resume.tex
+tectonic -X compile resume.tex
 ```
 
-### Full build with LaTeXmk (recommended)
+### Full build with LaTeXmk and XeLaTeX
 ```bash
-latexmk -pdf resume.tex
+latexmk -xelatex resume.tex
+```
+
+### Copy the final named resume
+```bash
+cp resume.pdf Joshua_Palamuttam_Resume.pdf
 ```
 
 ### Clean auxiliary files
@@ -31,7 +36,7 @@ latexmk -C
 ## Architecture
 
 ### Core Files
-- **resume.tex**: Main resume content file containing all personal information, work experience, education, skills, and projects
+- **resume.tex**: Main resume content file containing all personal information, work experience, education, skills, and projects; uses T1-encoded Latin Modern typography with a 10-point body font
 - **resume.cls**: Custom LaTeX document class that defines the resume's structure and styling
   - Provides custom environments: `rSection`, `rSubsection`, `rsemisection`
   - Handles header formatting with name and contact information via `\name{}` and `\address{}` commands
@@ -42,20 +47,18 @@ latexmk -C
 The resume.cls defines three main environments for structuring content:
 
 1. **rSection**: Top-level sections (Education, Experience, Skills, etc.)
-2. **rSubsection**: Subsections with 4 parameters: company/organization, dates, title/role, location
+2. **rSubsection**: Subsections with 3 parameters: company/organization, dates, and title/location
    - Used for work experience entries with bullet points
-3. **rsemisection**: Simplified subsections with 2 parameters: title, dates
+3. **rsemisection**: Simplified subsections with 3 parameters: title, dates, and detail/degree
    - Used for education and projects without extensive bullet points
 
 ### Document Structure
 
 The resume follows this organization:
 1. Header with name and contact information (defined via `\name{}` and `\address{}` macros)
-2. Summary section (optional, currently active)
+2. Work Experience section (multiple rSubsection entries in reverse chronological order)
 3. Education section
-4. Work Experience section (multiple rSubsection entries in reverse chronological order)
-5. Projects section (currently commented out)
-6. Skills section (formatted as a table)
+4. Skills section (plain one-column labeled lines for ATS readability)
 
 ## Working with This Resume
 
@@ -68,7 +71,7 @@ The resume follows this organization:
 ### Modifying Layout/Styling
 - Edit `resume.cls` to change visual styling, spacing, or structural elements
 - Key spacing variables are defined at the bottom of resume.cls (`\namesize`, `\addressskip`, `\sectionlineskip`, etc.)
-- Margins are controlled in resume.tex via the geometry package (currently 0.5in left/right, 0.3in top/bottom)
+- Margins are controlled in resume.tex via the geometry package (currently 0.5in on all sides)
 
 ### Output
 - The compiled PDF is `resume.pdf` (also copied to `Joshua_Palamuttam_Resume.pdf`)
