@@ -20,7 +20,7 @@
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+\LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
@@ -69,8 +69,9 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+    \centerline{\MakeUppercase{\namesize\bf \@name}}
+    \par
+    \nameskip
   \endgroup
 }
 
@@ -111,7 +112,7 @@
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+\newenvironment{rSubsection}[3]{ % 3 input arguments - company name, year(s) employed, job title and location
 %\begin{multicols}{3}
 %{\bf #3}  
 %\columnbreak
@@ -136,14 +137,22 @@
 %{\bf #2}  
 %\end{minipage}
  
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.77em \vspace{-0.85em} % Compress items in list together for aesthetics
-  }{
+  \begin{list}{\textbullet}{
+   \setlength{\leftmargin}{1.1em}
+   \setlength{\labelsep}{0.4em}
+   \setlength{\itemsep}{0.12em}
+   \setlength{\parsep}{0em}
+   \setlength{\topsep}{0.25em}
+   \setlength{\partopsep}{0em}
+   \raggedright
+   \hyphenpenalty=10000
+   \exhyphenpenalty=10000
+  }}{
   \end{list}
-  \vspace{-0.8em} % Some space after the list of bullet points
+  \vspace{-0.2em} % Some space after the list of bullet points
 }
 
-\newenvironment{rsemisection}[2]{ % 4 input arguments - company name, year(s) employed, job title and location
+\newenvironment{rsemisection}[3]{ % 3 input arguments - school, dates, and degree
 %\begin{multicols}{3}
 %{\bf #3}  
 %\columnbreak
@@ -153,7 +162,7 @@
 %\end{multicols} 
 
 %\begin{tabular}{m{15em} C{13em} R{15em}}
-{\bf #1} \hfill{\bf #2}
+{\bf #1} \hfill{\bf #2} \\ {\em #3}
  
  
 %\end{tabular}
@@ -167,11 +176,9 @@
 %\begin{minipage}[b]{\linewidth}
 %{\bf #2}  
 %\end{minipage}
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.75em \vspace{-0.75em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{-0.5em} % Some space after the list of bullet points
+  \vspace{-0.2em}
+}{
+  \vspace{-0.35em}
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
