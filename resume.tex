@@ -13,14 +13,14 @@
     pdftitle={Joshua Palamuttam Resume},
     pdfauthor={Joshua Palamuttam},
     pdfsubject={Principal Software Engineer and Engineering Manager},
-    pdfkeywords={Principal Software Engineer, AI engineering, engineering management, AI agents, agent evaluation, Databricks, Delta Lake, MCP, search, backend, data platforms, cloud, OAuth}
+    pdfkeywords={Principal Software Engineer, engineering management, developer platforms, API architecture, authentication, authorization, usage-based billing, PostgreSQL, Stripe, MCP, AI agents, agent evaluation, Databricks, Delta Lake, search, cloud, OAuth}
 }
 
 \name{Joshua Palamuttam} % Your name
 % The resume class prints the third address first, followed by the first and second.
 \address{Seattle, WA \textbar{} \href{tel:+14088416194}{(408) 841-6194} \textbar{} \href{mailto:joshpal97@gmail.com}{joshpal97@gmail.com}}
 \address{\small \href{https://www.linkedin.com/in/joshua-palamuttam/}{linkedin.com/in/joshua-palamuttam} \enspace\textbar{}\enspace \href{https://github.com/Joshua-Palamuttam}{github.com/Joshua-Palamuttam} \enspace\textbar{}\enspace \href{https://www.joshuapalamuttam.com}{joshuapalamuttam.com}}
-\address{Principal Software Engineer \textbar{} Engineering Manager \textbar{} AI Agents, Search \& Data Platforms}
+\address{Principal Software Engineer \textbar{} Engineering Manager \textbar{} Developer Platforms \& AI Systems}
 
 \begin{document}
 %----------------------------------------------------------------------------------------
@@ -28,29 +28,37 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
-    \begin{rSubsection}{SeekOut}{Bellevue, WA}{Principal Software Engineer (Engineering Manager) \hfill October 2026 - Present \\
-        AI Engineering Manager (Senior Software Engineer 2) \hfill December 2025 - September 2026}
-        \item Built and launched SeekOut's MCP product from a customer-backed idea to public launch across the server, Apps UI, OAuth, authentication and authorization, Kubernetes, rate limiting, analytics, \href{https://seekout-search-mcp.seekout.io/}{public docs}, and the \href{https://chatgpt.com/apps/seekout/asdk_app_69f8dfd382048191829f4025e39c853e}{ChatGPT App Store}; join customer setup calls, deliver demos, and partner with Sales as adoption and load grow.
+    \begin{rSubsection}{SeekOut}{October 2026 - Present}{Principal Software Engineer \textbar{} Bellevue, WA}
+        \item Lead the AI engineering team and architect the Developer API, separating public contracts from provider integrations; build durable, retry-safe paid workflows and an independently deployed self-service console.
+        \item Architected shared identity and authorization across API and AI products, separating user identity, service permissions, and product policy through scoped credentials, request-bound delegation, and locally enforced service grants.
+        \item Architected a reusable usage-based billing platform, separating Stripe payment processing from transactional credit accounting; built atomic reservation and settlement, auditable receipts, spending controls, and reconciliation to handle concurrent retries and missed payment events.
+        \item Lead MCP V2's redesign from session-oriented tools to declarative workflows, using distributed search state, safe retries, and separate execution and presentation to support reliable AI-assistant integrations.
+        \item Introduced an engineering-wide RFC and architecture-review workflow, making cross-team decisions, tradeoffs, and owner accountability visible and versioned.
+    \end{rSubsection}
+    \begin{rSubsection}{SeekOut}{December 2025 - September 2026}{AI Engineering Manager (Senior Software Engineer 2) \textbar{} Bellevue, WA}
+        \item Built and launched SeekOut's MCP product end to end, including Apps UI, OAuth, Kubernetes, \href{https://seekout-search-mcp.seekout.io/}{public docs}, and the \href{https://chatgpt.com/apps/seekout/asdk_app_69f8dfd382048191829f4025e39c853e}{ChatGPT App Store}; supported customer setup and demos with Sales.
         \item Improved public people-search benchmark precision from 88\% to 98.3\%, then scaled evaluation coverage to 1,400 queries while cutting agent turns from 15--25 to 4--11.
         \item Built and validated a multi-model sourcing agent with React, OpenAI Agents SDK, LiteLLM, Redis, and live search; cut strategy generation from 28+ to about 8 tool calls and chart latency from about 5s to 1s cold/instant cached.
-        \item Manage SeekOut's AI engineering team and ship production code; built a workbench with 70+ workflows and 20 specialized agents, helping drive company-wide agentic-development adoption through shared tooling and demos.
+        \item Built a workbench with 70+ workflows and 20 specialized agents, helping drive company-wide agentic-development adoption through shared tooling and demos while managing the AI engineering team.
     \end{rSubsection}
     \begin{rSubsection}{SeekOut}{March 2021 - December 2025}{Senior Software Engineer 2 (promoted three times from Software Engineer) \textbar{} Bellevue, WA}
         \item Productionized LLM-powered candidate scorecards that surface top candidates from 1,000+ applicants per job and embedded evaluation into customer ATS workflows.
-        \item Built Spot's multi-ATS ingestion, Unified Profile, ORM, Docker database tests, and production migrations, enabling customer inbound workflows, richer cross-index search, and a new sales capability.
-        \item Built LLM- and vector-assisted natural-language search that generates Boolean queries for Azure Cognitive Search and Lucene.
+        \item Built Spot's multi-ATS ingestion and Unified Profile platform, enabling inbound workflows and cross-index search.
+        \item Built LLM- and vector-assisted natural-language search for Azure Cognitive Search and Lucene.
         \item Migrated ETL pipelines for multiple clients from Azure Functions to Databricks, reducing pipeline errors and building Delta Lake tables for time-series and business analytics.
         \item Built and operated an external partner API handling 25 million calls per week.
     \end{rSubsection}
-    \begin{rSubsection}{Counterpart}{May 2020 - March 2021}{Software Engineer \textbar{} Fishers, IN}
-        \item Owned React architecture and delivery for the Indiana Commission for Higher Education; shipped .NET MVC products for task management, environmental reporting, and volunteer engagement.
-    \end{rSubsection}
-    \begin{rSubsection}{The Permanente Medical Group, Inc.}{February 2020 - May 2020}{Junior .NET Analyst / Software Engineer, Contract \textbar{} San Jose, CA}
-        \item Built .NET Core and SQL applications for the Genetics Department, including an assay-management tool, from stakeholder requirements through production support.
-    \end{rSubsection}
-    \begin{rSubsection}{DMI}{June 2019 - February 2020}{Software Engineer \textbar{} Indianapolis, IN}
-        \item Developed an Angular, Node.js, and AWS serverless auction-operations POC and C++/.NET transmission-simulation components for Allison Transmission.
-    \end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Earlier Experience}
+    \begin{rsemisection}{Counterpart}{May 2020 - March 2021}{Software Engineer \textbar{} React architecture and .NET MVC delivery for Indiana public-sector products}
+    \end{rsemisection}
+
+    \begin{rsemisection}{The Permanente Medical Group, Inc.}{February 2020 - May 2020}{Junior .NET Analyst / Software Engineer, Contract \textbar{} .NET Core and SQL tools for Genetics}
+    \end{rsemisection}
+
+    \begin{rsemisection}{DMI}{June 2019 - February 2020}{Software Engineer \textbar{} Angular/Node.js/AWS auction operations and C++/.NET simulation}
+    \end{rsemisection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -89,10 +97,10 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Skills}
 {\raggedright
-\textbf{Languages:} C\#, Python, TypeScript, JavaScript, Java, SQL \\
-\textbf{Frameworks:} .NET Core, .NET, React, Angular, Node.js, Spring, EF Core \\
-\textbf{AI, Search \& Data:} MCP, AI agents, OpenAI Agents SDK, LiteLLM, LLM evaluation, Azure Cognitive Search, Lucene, vector search, Databricks, Delta Lake, ETL \\
-\textbf{Cloud \& Tools:} Azure, AWS, OAuth, Kubernetes, Docker, Redis, Git, Azure DevOps, PostgreSQL, SQL Server, Application Insights, Datadog, Postman, REST APIs, xUnit
+\textbf{Languages \& Frameworks:} C\#, Python, TypeScript, JavaScript, SQL, .NET, React, Node.js \\
+\textbf{AI \& Search:} MCP, OpenAI Agents SDK, LiteLLM, LLM evaluation, Azure Cognitive Search, Lucene \\
+\textbf{Data \& Billing:} PostgreSQL, SQL Server, Redis, Databricks, Delta Lake, ETL, Stripe \\
+\textbf{Cloud \& Security:} Azure, AWS, Kubernetes, Docker, OAuth/SSO, REST APIs, Application Insights
 \par}
 \end{rSection}
 
